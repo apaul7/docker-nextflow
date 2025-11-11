@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3:22.11.1
+FROM continuumio/miniconda3:25.3.1-1
 MAINTAINER Alexander Paul <alex.paul@.wustl.edu>
 
 RUN apt-get update && apt-get install -y \
@@ -10,6 +10,6 @@ RUN apt-get update && apt-get install -y \
 
 RUN conda update -n base -c defaults conda
 RUN conda install -c bioconda \
-  nextflow==23.10.1
+  nextflow==25.10.0-0
 
 WORKDIR /
